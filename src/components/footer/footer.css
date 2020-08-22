@@ -1,0 +1,25 @@
+
+/* Footer */
+
+.Footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background: #fff;
+    position: relative;
+    
+    box-shadow: -2px -4px 5px -5px #1b1c1d;
+  }
+  
+  .menu{
+    display: flex;
+    font-size: small;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .invest{
+    font-size: 2rem;
+    color: black;
+  }

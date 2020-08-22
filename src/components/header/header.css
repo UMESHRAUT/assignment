@@ -1,0 +1,110 @@
+
+/* Header */
+.Header{
+    position: fixed;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    font-weight: 500;
+    background: #fff;
+    position: relative;
+    box-shadow: -1px 2px 5px 0px #b8b8b8;
+  }
+  
+  .Plans{
+  flex: 1;
+  background: #eef2f5;
+  overflow-y: scroll;
+  
+  }
+  
+  
+  
+  .Search{
+    width: 90%;
+    height: 3rem;
+    align-items: center;
+    display: flex;
+    margin: 1rem auto .5rem;
+    background: #ffffff;
+    overflow: hidden;
+    border-radius: .5rem;
+    box-shadow: 5px 5px 5px 0px #adb0b2;
+  }
+  
+  .input{
+    border: none;
+    flex: 1;
+    outline: none;
+    padding: 1rem;
+  }
+  
+  .search-icon{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border-top-right-radius: .2rem;
+    color: white;
+    background: #318fbf;
+    cursor: pointer;
+  }
+  
+  .filter{
+    outline: none;
+    background: none;
+    border:1px solid white;
+    font-size: large;
+    font-weight: 500;
+    width: 100%;
+  
+  }
+  
+  .search-icon-disable{
+    background: #f1f1f1;
+    color: black;
+  }
+  
+  .show-screener{
+    position: absolute;
+    bottom: 5rem;
+    transition: all .3s;
+    /* width: 100%; */
+    background: rgb(255, 255, 255);
+  }
+  
+  .hide-screener{
+    position: absolute;
+    bottom: -15rem;
+    transition: all .3s;
+    background: rgb(255, 255, 255);
+  }
+  .Screener {
+    width: 52%;
+    /* margin: auto; */
+    position: fixed;
+  }
+  .Screener ul{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* height: 5rem; */
+  }
+  .Screener ul li{
+    list-style-type: none;
+    width: 100%;
+    font-size:large;
+    font-weight: 200;
+    padding: 1rem;
+    background: rgb(255, 255, 255);
+    border-top: 1px solid gray;
+  }
+  .Screener ul li:hover{
+    background: rgb(209, 209, 209);
+  }

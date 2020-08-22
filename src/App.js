@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
+import PlanContainer from './components/content/PlanContainer';
+import SearchBar from './components/content/SearchBar';
 
 function App() {
+  const [search,setSearch]=useState("");
+  const handleSearch=(e)=>{
+    console.log(e+"logging from app");
+    setSearch(e)
+
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="app_body">
+        <Header/>
+        <SearchBar search={handleSearch}/>
+        <PlanContainer search={search}/>
+        <Footer/>
+      </div>
     </div>
   );
 }
