@@ -74,14 +74,14 @@
   height: 7rem;
 }
 .deep-details h2{
-  font-size: x-large;
+  font-size: large;
   font-weight: 400;
 }
 .deep-details p{
-  font-size: large;
+  font-size: small;
   font-weight: 200;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .options{
   height: 2rem;
