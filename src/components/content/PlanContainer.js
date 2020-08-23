@@ -17,7 +17,8 @@ function PlanContainer({search}) {
         var car=window.location.pathname;
         id=car.split("/")[2];
         console.log(id);
-        setPage(parseInt(id))
+        if(parseInt(id)>0){
+        setPage(parseInt(id))}
         // window.location.href=14;
         setList(dd?.result?.funds)
         return () => {
@@ -29,8 +30,8 @@ function PlanContainer({search}) {
         <div className="Plans">
         <Page search={search} goto={currentPage}/>
         <div className="pageChanger">
-        <IconButton><BsChevronLeft className="next" onClick={()=>{window.location.href=(currentPage-20);}}></BsChevronLeft></IconButton>
-        <IconButton><BsChevronRight className="next" onClick={()=>{window.location.href=(currentPage+20)}}></BsChevronRight></IconButton>
+        <IconButton><BsChevronLeft className="next" onClick={()=>{window.location.href=(`/assignment/${currentPage-20}`);}}></BsChevronLeft></IconButton>
+        <IconButton><BsChevronRight className="next" onClick={()=>{window.location.href=(`/assignment/${currentPage+20}`)}}></BsChevronRight></IconButton>
         </div>
         </div>
     )
