@@ -19,9 +19,14 @@ function SearchBar(props) {
     const clearFilter=()=>{
         setSort("");
     }
+
+    const handleInput=(e)=>{
+        setSort(e.target.value);
+    }
+
     return (
         <div className="Search">
-            {searchText?<input placeholder="Type to Search.." className="input"/>:<>
+            {searchText?<input placeholder="Type to Search.." className="input" value={sort} onChange={handleInput}/>:<>
            <button className="filter" onClick={clearFilter}>All Funds </button>
            <button className="filter" onClick={()=>setScreener(!screener)}>Screener</button>
            <button className="filter">Filter by AMC </button>
