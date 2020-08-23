@@ -15,16 +15,18 @@ function PlanContainer({search}) {
 
     useEffect(() => {
         var car=window.location.pathname;
-        id=car.split("/")[2];
-        console.log(id);
-        if(parseInt(id)>0){
-        setPage(parseInt(id))}
+        id=car.split("/");
+        console.log(id.length);
+        if(parseInt(id[2])>0){
+        setPage(parseInt(id[2]))
+            console.log(id[2]);
+    }
         // window.location.href=14;
         setList(dd?.result?.funds)
         return () => {
             // 
         }
-    }, [])
+    }, [window.location.href])
         console.log(list.length);
     return (
         <div className="Plans">
