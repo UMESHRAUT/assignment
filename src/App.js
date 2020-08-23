@@ -4,7 +4,7 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import PlanContainer from './components/content/PlanContainer';
 import SearchBar from './components/content/SearchBar';
-import { BrowserRouter, Route } from 'react-router-dom';
+import {Route } from 'react-router-dom';
 
 function App() {
   const [search,setSearch]=useState("");
@@ -14,7 +14,7 @@ function App() {
 
   }
   return (
-    <BrowserRouter>
+    
     <div className="App">
       <div className="app_body">
         <Header/>
@@ -29,7 +29,6 @@ function App() {
         <Footer/>
       </div>
     </div>
-    </BrowserRouter>
   );
 }
 
