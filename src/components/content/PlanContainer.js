@@ -9,7 +9,7 @@ import Page from './Page';
 function PlanContainer({search}) {
     
     const dd=data;
-    const [currentPage,setPage]=useState(20);
+    const [currentPage,setPage]=useState(parseInt(20));
     const [list,setList]=useState([]);
     let id=undefined;
 
