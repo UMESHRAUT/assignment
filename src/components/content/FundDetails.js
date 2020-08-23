@@ -4,7 +4,6 @@ import { FiChevronRight } from 'react-icons/fi';
 import { GiShoppingCart } from 'react-icons/gi';
 import { FcComboChart } from 'react-icons/fc';
 import { IconButton} from '@material-ui/core';
-import { Link } from 'react-router-dom';
 
 function FundDetails({details}) {
     const{name,FundType}=details;

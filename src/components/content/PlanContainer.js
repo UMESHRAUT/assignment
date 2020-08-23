@@ -1,39 +1,37 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import FundDetails from './FundDetails'
 import data from '../../data.json';
-import { FiChevronDown } from 'react-icons/fi';
-import { IconButton} from '@material-ui/core';
+import { BsChevronLeft,BsChevronRight } from 'react-icons/bs';
+import { IconButton, Icon} from '@material-ui/core';
+import Page from './Page';
+// import 'react-vtua'
 
 function PlanContainer({search}) {
     
     const dd=data;
     const [currentPage,setPage]=useState(20);
+    const [list,setList]=useState([]);
+    let id=undefined;
+
+    useEffect(() => {
+        var car=window.location.pathname;
+        id=car.split("/")[2];
+        console.log(id);
+        setPage(parseInt(id))
+        // window.location.href=14;
+        setList(dd?.result?.funds)
+        return () => {
+            // 
+        }
+    }, [])
+        console.log(list.length);
     return (
         <div className="Plans">
-
-
-        {search!==""?[...Array(currentPage).keys()].map(i=>{
-            if(search==="oneyearReturn" && dd.result?.funds[i].oneyearReturn>3){
-                return <FundDetails key={dd.result?.funds[i].UID} details={dd.result?.funds[i]}/>
-            }
-            else if(search==="threeyearReturn" && dd.result?.funds[i].threeyearReturn>3){
-                return <FundDetails key={dd.result?.funds[i].UID} details={dd.result?.funds[i]}/>
-            }
-            else if(search==="fiveyearReturn" && dd.result?.funds[i].fiveyearReturn>3){
-                return <FundDetails key={dd.result?.funds[i].UID} details={dd.result?.funds[i]}/>
-            }
-            else if((dd.result?.funds[i].name).indexOf(search.toUpperCase())!==-1){
-                return <FundDetails key={dd.result?.funds[i].UID} details={dd.result?.funds[i]}/>
-            }
-        }):
-        [...Array(currentPage).keys()].map(i=>{
-                console.log(i);
-                return <FundDetails key={dd.result?.funds[i].UID} details={dd.result?.funds[i]}/>
-        })
-        }
-        
-    <FiChevronDown className="next" onClick={()=>{setPage(currentPage+20);console.log(currentPage)}}><IconButton /></FiChevronDown>
-    
+        <Page search={search} goto={currentPage}/>
+        <div className="pageChanger">
+        <IconButton><BsChevronLeft className="next" onClick={()=>{window.location.href=(currentPage-20);}}></BsChevronLeft></IconButton>
+        <IconButton><BsChevronRight className="next" onClick={()=>{window.location.href=(currentPage+20)}}></BsChevronRight></IconButton>
+        </div>
         </div>
     )
 }

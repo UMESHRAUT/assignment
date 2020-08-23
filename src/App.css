@@ -172,3 +172,8 @@ font-size: large;
   background: rgb(218, 216, 216);
   margin: auto;
 }
+
+.pageChanger{
+  display: flex;
+  justify-content: center;
+}
