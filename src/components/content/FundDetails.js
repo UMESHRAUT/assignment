@@ -34,7 +34,7 @@ function FundDetails({details}) {
                     <FcComboChart className="details_chart"/>
                 </div>
                 <div className="deep-details">
-                <span>Average 3Y Rolling Return</span>
+                <p>Average 3Y Rolling Return</p>
                 {details.threeyearReturn>0?<h2>{details.threeyearReturn} %</h2>:<span>Not Available</span>}
                 </div>
                 <div className="deep-details">

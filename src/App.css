@@ -75,11 +75,11 @@
 }
 .deep-details h2{
   font-size: large;
-  font-weight: 200;
+  font-weight: 400;
 }
-.deep-details span{
+.deep-details p{
   font-size: large;
-  font-weight: 200;
+  font-weight: 400;
   display: flex;
   justify-content: space-between;
 }
