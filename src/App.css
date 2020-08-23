@@ -74,9 +74,12 @@
   height: 7rem;
 }
 .deep-details h2{
-  font-weight: 500;
+  font-size: large;
+  font-weight: 200;
 }
 .deep-details span{
+  font-size: large;
+  font-weight: 200;
   display: flex;
   justify-content: space-between;
 }
