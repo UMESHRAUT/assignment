@@ -18,6 +18,11 @@
   overflow: hidden;
 }
 
+@media screen and (max-width:1028px){
+  .app_body{
+    width: 100%;
+  }
+}
 .icon{
   color: #919191;
   font-size: 2rem;
