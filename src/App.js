@@ -20,7 +20,7 @@ function App() {
         <Header/>
         <SearchBar search={handleSearch}/>
         
-        <Route exact path="/assignment">
+        <Route exact path="/assignment/">
         <PlanContainer search={search}/>
         </Route>
         <Route exact path="/assignment/:id">
